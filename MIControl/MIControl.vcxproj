@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{5d974ebd-8aa7-41b5-aebe-39889fbb8e14}</ProjectGuid>
+    <RootNamespace>MIControl</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>uxtheme.lib;comctl32.lib;comdlg32.lib;winmm.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>.\;.\h;.\h\GUI\Wrapper</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>uxtheme.lib;comctl32.lib;comdlg32.lib;winmm.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AssemblyDebug>false</AssemblyDebug>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;SETCTLTHEME;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalIncludeDirectories>.\;.\h;.\h\GUI\Wrapper;$(SolutionDir)\MIControlLib\h;$(SolutionDir)\MIControlLib\h\proto;$(SolutionDir)\MIControlLib\google\dprotobuf\include</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Cfgmgr32.lib;uxtheme.lib;comctl32.lib;comdlg32.lib;winmm.lib;$(SolutionDir)$(Platform)\$(Configuration)\MIControlLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\MIControlSvc.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions> /ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;SETCTLTHEME;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>.\;.\h;.\h\GUI\Wrapper;$(SolutionDir)\MIControlLib\h;$(SolutionDir)\MIControlLib\h\proto;$(SolutionDir)\MIControlLib\google\rprotobuf\include</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>uxtheme.lib;comctl32.lib;comdlg32.lib;winmm.lib;$(SolutionDir)$(Platform)\$(Configuration)\MIControlLib.lib;$(SolutionDir)$(Platform)\$(Configuration)\MIControlSvc.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AssemblyDebug>false</AssemblyDebug>
+      <AdditionalOptions> /ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cpp\GUI\Dialogs\CHostDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\CSplashScreen.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\HostDlg\CHostDlg_Helper.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\HostDlg\CHostDlg_ListView.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\HostDlg\CHostDlg_MyMessage.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\HostDlg\CHostDlg_Periodic.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\HostDlg\CHostDlg_PipeCommand.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPageAboutDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPageChargeProtectDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPageDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPageICCProfileDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPageMiButtonDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPageMicDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPagePerfomanceDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPageRefreshRateDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPageServiceStatusDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPageSplashSkinDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPageSysInfoDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Dialogs\Pages\CPageTouchpadDlg.cpp" />
+    <ClCompile Include="cpp\GUI\Wrapper\CBitmap.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="cpp\GUI\Wrapper\CDialogTemplate.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="cpp\GUI\Wrapper\Controls\CIconBits.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="cpp\GUI\Wrapper\Controls\cimgloader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="cpp\GUI\Wrapper\Controls\CListView.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="cpp\GUI\Wrapper\Controls\ctoolbar.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="cpp\GUI\Wrapper\CWindow.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="cpp\MIEvent\CEventListener.cpp" />
+    <ClCompile Include="cpp\MIEvent\CEventStatus.cpp" />
+    <ClCompile Include="cpp\precomp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">precomp.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="MIControl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="h\GUI\Dialogs\CHostDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\CSplashScreen.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPageAboutDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPageChargeProtectDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPageDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPageICCProfileDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPageMiButtonDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPageMicDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPagePerfomanceDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPageRefreshRateDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPageServiceStatusDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPageSplashSkinDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPageSysInfoDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\CPageTouchpadDlg.h" />
+    <ClInclude Include="h\GUI\Dialogs\Pages\Pages.h" />
+    <ClInclude Include="h\GUI\Wrapper\CBitmap.h" />
+    <ClInclude Include="h\GUI\Wrapper\CDialogTemplate.h" />
+    <ClInclude Include="h\GUI\Wrapper\Controls.h" />
+    <ClInclude Include="h\GUI\Wrapper\Controls\CIconBits.h" />
+    <ClInclude Include="h\GUI\Wrapper\Controls\cimgloader.h" />
+    <ClInclude Include="h\GUI\Wrapper\Controls\CListView.h" />
+    <ClInclude Include="h\GUI\Wrapper\Controls\ctoolbar.h" />
+    <ClInclude Include="h\GUI\Wrapper\CWindow.h" />
+    <ClInclude Include="h\MIEvent\CEventListener.h" />
+    <ClInclude Include="h\MIEvent\CEventStatus.h" />
+    <ClInclude Include="h\MIEvent\MIEvent.h" />
+    <ClInclude Include="h\precomp.h" />
+    <ClInclude Include="winres.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MIControl.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="rc\png\NewIntelligentMode.png" />
+    <Image Include="rc\216.PNG" />
+    <Image Include="rc\big.ico" />
+    <Image Include="rc\icon1.ico" />
+    <Image Include="rc\ico\air-wind-weather.ico" />
+    <Image Include="rc\ico\battery-half.ico" />
+    <Image Include="rc\ico\chatbot.ico" />
+    <Image Include="rc\ico\chip.ico" />
+    <Image Include="rc\ico\fire-trend-hot.ico" />
+    <Image Include="rc\ico\image-photo-picture.ico" />
+    <Image Include="rc\ico\laptop-computer.ico" />
+    <Image Include="rc\ico\microphone-music-talk.ico" />
+    <Image Include="rc\ico\mouse.ico" />
+    <Image Include="rc\ico\sparkle-stars-ai_2.ico" />
+    <Image Include="rc\ico\toogle-left.ico" />
+    <Image Include="rc\ico\toogle-right-3.ico" />
+    <Image Include="rc\ico\video-camera.ico" />
+    <Image Include="rc\MIControl.ico" />
+    <Image Include="rc\png\battery100_charging.png" />
+    <Image Include="rc\png\battery70_charging.png" />
+    <Image Include="rc\png\CapsLock.png" />
+    <Image Include="rc\png\CapsUnlock.png" />
+    <Image Include="rc\png\ChargeLowPower.png" />
+    <Image Include="rc\png\DisFre100.png" />
+    <Image Include="rc\png\DisFre120.png" />
+    <Image Include="rc\png\DisFre144.png" />
+    <Image Include="rc\png\DisFre165.png" />
+    <Image Include="rc\png\DisFre240.png" />
+    <Image Include="rc\png\DisFre48.png" />
+    <Image Include="rc\png\DisFre60.png" />
+    <Image Include="rc\png\DisFre72.png" />
+    <Image Include="rc\png\DisFre75.png" />
+    <Image Include="rc\png\DisFre90.png" />
+    <Image Include="rc\png\DisFreErr.png" />
+    <Image Include="rc\png\FnLock.png" />
+    <Image Include="rc\png\FnUnlock.png" />
+    <Image Include="rc\png\KeyboardLight0.png" />
+    <Image Include="rc\png\KeyboardLight1.png" />
+    <Image Include="rc\png\KeyboardLight10.png" />
+    <Image Include="rc\png\KeyboardLight2.png" />
+    <Image Include="rc\png\KeyboardLight3.png" />
+    <Image Include="rc\png\KeyboardLight4.png" />
+    <Image Include="rc\png\KeyboardLight5.png" />
+    <Image Include="rc\png\KeyboardLight6.png" />
+    <Image Include="rc\png\KeyboardLight7.png" />
+    <Image Include="rc\png\KeyboardLight8.png" />
+    <Image Include="rc\png\KeyboardLight9.png" />
+    <Image Include="rc\png\KeyboardLightAuto.png" />
+    <Image Include="rc\png\MuteOff.png" />
+    <Image Include="rc\png\MuteOn.png" />
+    <Image Include="rc\png\NumLock.png" />
+    <Image Include="rc\png\NumUnlock.png" />
+    <Image Include="rc\png\TouchpadOff.png" />
+    <Image Include="rc\png\TouchpadOn.png" />
+    <Image Include="rc\png\WorkloadBalance_En.png" />
+    <Image Include="rc\png\WorkloadDeception_En.png" />
+    <Image Include="rc\png\WorkloadSilent_En.png" />
+    <Image Include="rc\png\WorkloadSpeed_En.png" />
+    <Image Include="rc\png\WorkloadTurbo_En.png" />
+    <Image Include="rc\small.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

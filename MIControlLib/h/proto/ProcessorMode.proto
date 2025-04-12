@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message ProcessorMode {
+    int64 mode_field = 1;
+    optional int64 mode_field_additional = 2;
+}

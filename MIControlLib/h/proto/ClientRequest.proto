@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message ClientRequest {
+  string request_type = 1;          // Строка "CLIENTREQUEST"
+  string action = 2;               // Строка "GetnternalScreenId"
+  string display_info = 3;         // Строка "DISPLAY\TMA2022\4&"
+  bytes additional_info = 4;
+}
