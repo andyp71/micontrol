@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message ClientPipeRequest {
+  string request_type = 1;          // Строка "CLIENTREQUEST"
+  string action = 2;               // Строка "GetnternalScreenId"
+}

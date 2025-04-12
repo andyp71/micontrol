@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message ClientRequestBin {
+  string request_type = 1;
+  string action = 2;
+  bytes additional_info = 3;
+}
