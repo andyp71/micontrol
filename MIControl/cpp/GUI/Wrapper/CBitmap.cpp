@@ -253,12 +253,12 @@ HBITMAP CBitmap::Bitmap()
     return NULL;
 }
 
-INT CBitmap::Width()
+INT CBitmap::Width() const
 {
     return m_buffer.sz.cx;
 }
 
-INT CBitmap::Height()
+INT CBitmap::Height() const
 {
     return m_buffer.sz.cy;
 }

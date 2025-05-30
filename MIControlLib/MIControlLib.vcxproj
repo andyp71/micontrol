@@ -119,7 +119,7 @@
       <Command>$(ProjectDir)\google\dprotobuf\bin\protoc --cpp_out=$(ProjectDir)\h\proto -I $(ProjectDir)\h\proto $(ProjectDir)\h\proto\*.proto</Command>
     </PreBuildEvent>
     <Lib>
-      <AdditionalDependencies>$(ProjectDir)\google\dprotobuf\lib\libprotobufd.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)\google\dprotobuf\lib\libprotobufd.lib;cfgmgr32.lib;$(SolutionDir)\MIControlLib\w32u.lib</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
   </ItemDefinitionGroup>
