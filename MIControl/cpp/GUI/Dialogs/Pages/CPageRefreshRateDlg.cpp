@@ -1,5 +1,5 @@
 /*
-	MI Control Utility â€” v1.2.5 [public version]
+	MI Control Utility — v1.2.5 [public version]
 	Copyright (C) 2025 ALXR aka loginsin
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -101,6 +101,7 @@ void CPageRefreshRateDlg::OnButton(USHORT uId)
 	}
 
 	ChangeDisplaySettings(&devMode, CDS_UPDATEREGISTRY);
+	SendMessage(*Parent(), WM_CUSTOM_SHOW_SPLASH, uId, 0);
 }
 
 void CPageRefreshRateDlg::OnShow()
