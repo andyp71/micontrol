@@ -100,8 +100,10 @@ void CPageRefreshRateDlg::OnButton(USHORT uId)
 	case IDB_RATE_240: devMode.dmDisplayFrequency = 240; break;
 	}
 
-	ChangeDisplaySettings(&devMode, CDS_UPDATEREGISTRY);
-	SendMessage(*Parent(), WM_CUSTOM_SHOW_SPLASH, uId, 0);
+	if (ChangeDisplaySettings(&devMode, CDS_UPDATEREGISTRY) == DISP_CHANGE_SUCCESSFUL)
+		SendMessage(*Parent(), WM_CUSTOM_SHOW_SPLASH, uId, 0);
+	else
+		SendMessage(*Parent(), WM_CUSTOM_SHOW_SPLASH, IDB_RATE_FAIL, 0);
 }
 
 void CPageRefreshRateDlg::OnShow()
